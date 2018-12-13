@@ -22,6 +22,7 @@ public class HistoricalDataReader {
     private static final LinkedBlockingQueue<IntradayDataHolder> _dataHolder = new LinkedBlockingQueue<>();
 
     public static void intializeDataForScan(KiteConnect inKiteConnect) {
+        System.out.println("Started Scan");
         Set<String> instruments = TRADE_INSTRUMENTS.keySet();
         for (String instrument : instruments) {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

@@ -37,7 +37,7 @@ public class KiteLogin {
                 }
             });
 
-            User user = kiteConnect.generateSession("VxUAMaihw4KQ2mN1TmDPouFh5REpfePc", "nz72vke7y14o5qgpzibfhssqyvts74kx");
+            User user = kiteConnect.generateSession("2yNT6BuAHIoye2k26GIAE5vjTyvPpWXq", "nz72vke7y14o5qgpzibfhssqyvts74kx");
             kiteConnect.setAccessToken(user.accessToken);
             kiteConnect.setPublicToken(user.publicToken);
         } catch (KiteException | IOException e) {

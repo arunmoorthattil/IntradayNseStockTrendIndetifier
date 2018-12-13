@@ -5,6 +5,7 @@ import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Properties;
 
@@ -44,7 +45,7 @@ public class SendReports {
             msg.setText(content, "UTF-8", "html");
             msg.setHeader("XPriority", "1");
             Transport.send(msg);
-            System.out.println("Mail has been sent successfully");
+            System.out.println("Mail has been sent successfully"+ LocalDate.now());
         } catch (MessagingException mex) {
             System.out.println("Unable to send an email" + mex);
         }

@@ -7,7 +7,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class TimeTraderApplication {
-
     public static void main(String[] args) {
         ConfigurableApplicationContext appContext = SpringApplication.run(TimeTraderApplication.class, args);
         KiteLogin kiteLogin = appContext.getBean(KiteLogin.class);
@@ -15,7 +14,6 @@ public class TimeTraderApplication {
         KiteConnect kiteConnect =kiteLogin.getKiteConnect();
         assert kiteConnect!=null;
         RunIntradayTimeScanner scanner = appContext.getBean(RunIntradayTimeScanner.class);
-        HistoricalDataReader.intializeDataForScan(kiteConnect);
-
+        scanner.runScan(kiteConnect);
     }
 }
